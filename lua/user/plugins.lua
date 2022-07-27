@@ -62,11 +62,14 @@ return packer.startup(function(use)
 
     -- Features
     use({ "goolord/alpha-nvim", commit = "ef27a59e5b4d7b1c2fe1950da3fe5b1c5f3b4c94" })
-    use("vim-airline/vim-airline")
+    -- use("vim-airline/vim-airline")
+    use( "nvim-lualine/lualine.nvim" )
     use({ "windwp/nvim-autopairs", commit = "fa6876f832ea1b71801c4e481d8feca9a36215ec" }) -- Autopairs, integrates with both cmp and treesitter
     use({ "kyazdani42/nvim-tree.lua", commit = "bdb6d4a25410da35bbf7ce0dbdaa8d60432bc243" })
     use({ "akinsho/toggleterm.nvim", commit = "aaeed9e02167c5e8f00f25156895a6fd95403af8" })
     use("folke/which-key.nvim")
+    use( "tpope/vim-surround" )
+    use( "numToStr/Comment.nvim" )
 
     -- Colorschemes
     use("tomasiser/vim-code-dark")
