@@ -95,8 +95,6 @@ local mappings = {
         "Buffers",
     },
     ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-    ["h"] = { "<cmd>split<CR>", "Horizontal Split"},
-    ["v"] = { "<cmd>vsp<CR>", "Vertical Split" },
     ["w"] = { "<cmd>w!<CR>", "Save" },
     ["q"] = { "<cmd>q!<CR>", "Quit" },
     ["c"] = { "<cmd>bdelete!<CR>", "Close Buffer" },
@@ -111,12 +109,15 @@ local mappings = {
     },
 
     l = {
+        -- TODO: What the hell is code lense
         name = "LSP",
         a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
+        -- TODO: Unknown command
         d = {
             "<cmd>Telescope lsp_document_diagnostics<cr>",
             "Document Diagnostics",
         },
+        -- Also unknown
         w = {
             "<cmd>Telescope lsp_workspace_diagnostics<cr>",
             "Workspace Diagnostics",
@@ -124,15 +125,8 @@ local mappings = {
         f = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Format" },
         i = { "<cmd>LspInfo<cr>", "Info" },
         I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
-        j = {
-            "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
-            "Next Diagnostic",
-        },
-        k = {
-            "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>",
-            "Prev Diagnostic",
-        },
         l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
+        -- TODO: Sort out quickfix
         q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
         r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
         s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },

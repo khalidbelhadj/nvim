@@ -70,6 +70,7 @@ return packer.startup(function(use)
     use("folke/which-key.nvim")
     use( "tpope/vim-surround" )
     use( "numToStr/Comment.nvim" )
+    use( "folke/todo-comments.nvim" )
 
     -- Colorschemes
     use("tomasiser/vim-code-dark")
