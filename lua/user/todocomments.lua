@@ -2,8 +2,8 @@ local status_ok, todo_comments = pcall(require, "todo-comments")
 if not status_ok then
   return
 end
-
-todo_comments.setup {
+-- TODO: Figure out why colours aren't showing properly
+todo_comments.setup{
   signs = true, -- show icons in the signs column
   sign_priority = 8, -- sign priority
   -- keywords recognized as todo comments
@@ -37,11 +37,11 @@ todo_comments.setup {
   -- list of named colors where we try to extract the guifg from the
   -- list of hilight groups or use the hex color if hl not found as a fallback
   colors = {
-    error = { "DiagnosticError", "ErrorMsg", "#DC2626" },
-    warning = { "DiagnosticWarning", "WarningMsg", "#FBBF24" },
-    info = { "DiagnosticInfo", "#2563EB" },
-    hint = { "DiagnosticHint", "#10B981" },
-    default = { "Identifier", "#7C3AED" },
+    error = { "#DC2626" },
+    warning = { "#FBBF24" },
+    info = { "#2563EB" },
+    hint = { "#10B981" },
+    default = { "#7C3AED" },
   },
   search = {
     command = "rg",
