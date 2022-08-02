@@ -21,6 +21,5 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
     debug = false,
     sources = {
-        -- Sources for diagnostics and formatting
     },
 })

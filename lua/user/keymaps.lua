@@ -26,8 +26,14 @@ local keymap = vim.api.nvim_set_keymap
 --Remap space as leader key
 vim.g.mapleader = " "
 
+-- Normal --
 
+-- Pess enter after search to remove highlights
 keymap("n", "<CR>", ":noh<CR><CR>", opts)
+
+-- Add new line with>out insert mode
+keymap("n", "<leader>o", "o<Esc>0_D", opts)
+keymap("n", "<leader>O", "O<Esc>0_D", opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
