@@ -52,7 +52,7 @@ nvim_tree.setup {
     },
     renderer = {
         indent_markers = {
-            enable = false
+            enable = true
         },
         root_folder_modifier = ":t",
         icons = {
