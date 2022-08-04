@@ -5,7 +5,7 @@
 --  ██╔═══╝ ██║     ██║   ██║██║   ██║██║██║╚██╗██║╚════██║
 --  ██║     ███████╗╚██████╔╝╚██████╔╝██║██║ ╚████║███████║
 --  ╚═╝     ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝╚══════╝
---  
+--
 --  All plugins are installed here
 
 local fn = vim.fn
@@ -55,7 +55,7 @@ return packer.startup(function(use)
     use({ "wbthomason/packer.nvim", commit = "00ec5adef58c5ff9a07f11f45903b9dbbaa1b422" }) -- Have packer manage itself
     use({ "nvim-lua/plenary.nvim", commit = "968a4b9afec0c633bc369662e78f8c5db0eba249" }) -- Useful lua functions used by lots of  
 
-    -- UI 
+    -- UI
     use({ "lukas-reineke/indent-blankline.nvim", commit = "6177a59552e35dfb69e1493fd68194e673dc3ee2" })
     use({ "akinsho/bufferline.nvim", commit = "c78b3ecf9539a719828bca82fc7ddb9b3ba0c353" })
     use({ "kyazdani42/nvim-web-devicons", commit = "8d2c5337f0a2d0a17de8e751876eeb192b32310e" })
@@ -63,14 +63,14 @@ return packer.startup(function(use)
     -- Features
     use({ "goolord/alpha-nvim", commit = "ef27a59e5b4d7b1c2fe1950da3fe5b1c5f3b4c94" })
     -- use("vim-airline/vim-airline")
-    use( "nvim-lualine/lualine.nvim" )
+    use("nvim-lualine/lualine.nvim")
     use({ "windwp/nvim-autopairs", commit = "fa6876f832ea1b71801c4e481d8feca9a36215ec" }) -- Autopairs, integrates with both cmp and treesitter
     use({ "kyazdani42/nvim-tree.lua", commit = "bdb6d4a25410da35bbf7ce0dbdaa8d60432bc243" })
     use({ "akinsho/toggleterm.nvim", commit = "aaeed9e02167c5e8f00f25156895a6fd95403af8" })
-    use( "folke/which-key.nvim" )
-    use( "tpope/vim-surround" )
-    use( "numToStr/Comment.nvim" )
-    use( "folke/todo-comments.nvim" )
+    use("folke/which-key.nvim")
+    use("tpope/vim-surround")
+    use("numToStr/Comment.nvim")
+    use("folke/todo-comments.nvim")
 
     -- Colorschemes
     use("tomasiser/vim-code-dark")
@@ -78,7 +78,8 @@ return packer.startup(function(use)
     use("dracula/vim")
     use("tomasr/molokai")
     use("dunstontc/dark-plus-everywhere")
-
+    use("bluz71/vim-moonfly-colors")
+    use("folke/tokyonight.nvim")
     -- cmp plugins
     use({ "hrsh7th/nvim-cmp", commit = "df6734aa018d6feb4d76ba6bda94b1aeac2b378a" }) -- The completion plugin
     use({ "hrsh7th/cmp-buffer", commit = "62fc67a2b0205136bc3e312664624ba2ab4a9323" }) -- buffer completions
@@ -94,7 +95,7 @@ return packer.startup(function(use)
     -- LSP
     use({ "neovim/nvim-lspconfig", commit = "148c99bd09b44cf3605151a06869f6b4d4c24455" }) -- enable LSP
     use({ "williamboman/nvim-lsp-installer", commit = "e9f13d7acaa60aff91c58b923002228668c8c9e6" }) -- simple to use language server installer
-    use( "jose-elias-alvarez/null-ls.nvim" ) -- for formatters and linters
+    use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
     use("RRethy/vim-illuminate")
 
     -- Telescope
@@ -106,6 +107,9 @@ return packer.startup(function(use)
 
     -- Java
     use("mfussenegger/nvim-jdtls")
+
+    -- R Programming
+    use("jalvesaq/Nvim-R")
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
