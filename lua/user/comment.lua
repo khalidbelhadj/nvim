@@ -1,3 +1,13 @@
+--
+--   ██████╗ ██████╗ ███╗   ███╗███╗   ███╗███████╗███╗   ██╗████████╗
+--  ██╔════╝██╔═══██╗████╗ ████║████╗ ████║██╔════╝████╗  ██║╚══██╔══╝
+--  ██║     ██║   ██║██╔████╔██║██╔████╔██║█████╗  ██╔██╗ ██║   ██║   
+--  ██║     ██║   ██║██║╚██╔╝██║██║╚██╔╝██║██╔══╝  ██║╚██╗██║   ██║   
+--  ╚██████╗╚██████╔╝██║ ╚═╝ ██║██║ ╚═╝ ██║███████╗██║ ╚████║   ██║   
+--   ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚═╝     ╚═╝╚══════╝╚═╝  ╚═══╝   ╚═╝   
+--
+--  Comment text with key bindings
+
 local status_ok, comment = pcall(require, "comment")
 if not status_ok then
     return
@@ -65,10 +75,10 @@ comment.setup {
     },
 
     ---Pre-hook, called before commenting the line
-    ---@type fun(ctx: CommentCtx):string
+    ---@type fun(ctx):string
     pre_hook = nil,
 
     ---Post-hook, called after commenting is done
-    ---@type fun(ctx: CommentCtx)
+    ---@type fun(ctx)
     post_hook = nil,
 }

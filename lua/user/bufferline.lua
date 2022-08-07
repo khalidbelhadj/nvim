@@ -16,14 +16,15 @@ end
 bufferline.setup {
     options = {
         numbers = "none", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
-        close_command = "bdelete! %d", -- can be a string | function, see "Mouse actions"
+        close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
         right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
         left_mouse_command = "buffer %d", -- can be a string | function, see "Mouse actions"
         middle_mouse_command = nil, -- can be a string | function, see "Mouse actions"
         -- NOTE: this plugin is designed with this icon in mind,
         -- and so changing this is NOT recommended, this is intended
         -- as an escape hatch for people who cannot bear it for whatever reason
-        indicator_icon = "▎",
+        indicator_icon = "│",
+        -- indicator_icon = "▎",
         buffer_close_icon = "",
         -- buffer_close_icon = '',
         modified_icon = "●",
@@ -46,6 +47,11 @@ bufferline.setup {
         tab_size = 21,
         diagnostics = "nvim_lsp", -- | "nvim_lsp" | "coc",
         diagnostics_update_in_insert = false,
+        --- count is an integer representing total count of errors
+        --- level is a string "error" | "warning"
+        --- diagnostics_dict is a dictionary from error level ("error", "warning" or "info")to number of errors for each level.
+        --- this should return a string
+        --- Don't get too fancy as this function will be executed a lot
         diagnostics_indicator = function(count, level, diagnostics_dict, context)
             local icon = level:match("error") and " " or " "
             return " " .. icon .. count
@@ -69,9 +75,8 @@ bufferline.setup {
         --     return true
         --   end
         -- end,
-        offsets = { { filetype = "toggleterm", text = "Terminal", padding = 1 },
-                    { filetype = "NvimTree", text = "File Explorer", padding = 1  },
-        },
+        offsets = { { filetype = "NvimTree", text = "File Explorer", padding = 1 },
+            { filetype = "toggleterm", text = "Terminal", padding = 1 } },
         show_buffer_icons = true,
         show_buffer_close_icons = true,
         show_close_icon = true,
@@ -89,12 +94,12 @@ bufferline.setup {
     },
     highlights = {
         fill = {
-            guifg = { attribute = "fg", highlight = "#ff0000" },
-            guibg = { attribute = "bg", highlight = "TabLine" },
+            guifg = { attribute = "fg", highlight = "#EE4B2B" },
+            guibg = { attribute = "bg", highlight = "#EE4B2B" },
         },
         background = {
-            guifg = { attribute = "fg", highlight = "TabLine" },
-            guibg = { attribute = "bg", highlight = "TabLine" },
+            guifg = { attribute = "fg", highlight = "#EE4B2B"},
+            guibg = { attribute = "bg", highlight = "#EE4B2B"},
         },
 
         -- buffer_selected = {
