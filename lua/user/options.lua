@@ -44,7 +44,8 @@ local options = {
     scrolloff = 8,                           -- Start scrolling 8 lines before end
     sidescrolloff = 8,                       -- Start scrolling 8 columns before end
     guifont = "monospace:h17",               -- The font used in graphical neovim applications
-    autochdir = true
+    autochdir = true,
+    laststatus = 3,
 }
 
 -- Setting all the above options

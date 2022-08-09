@@ -5,7 +5,7 @@
 --  ██║██║╚██╗██║██║   ██║   
 --  ██║██║ ╚████║██║   ██║   
 --  ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝   
---
+--init
 --  Where all configurations are set
 
 require "user.options"
