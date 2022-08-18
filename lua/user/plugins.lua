@@ -78,6 +78,7 @@ return packer.startup(function(use)
     use("dracula/vim")
     use("LunarVim/darkplus.nvim")
     use("ghifarit53/tokyonight-vim")
+    use("Everblush/everblush.vim")
 
     -- cmp plugins
     use({ "hrsh7th/nvim-cmp", commit = "df6734aa018d6feb4d76ba6bda94b1aeac2b378a" })

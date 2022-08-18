@@ -61,3 +61,7 @@ vim.opt.fillchars = vim.opt.fillchars + 'eob: ' -- Replacing end of buffer ~ wit
 -- vim.opt.fillchars:append { -- Adding an extra space under status line
 --  stl = ' ',
 -- }
+
+-- Autocommand to set laststatus=3, doesnt seem to work normally
+local group = vim.api.nvim_create_augroup("Setting last status", {clear = true})
+vim.api.nvim_create_autocmd("BufEnter", {command = "set laststatus=3", group = group})

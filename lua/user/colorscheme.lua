@@ -8,7 +8,7 @@
 --
 --  Setting colorscheme in a safe way
 
-local colorscheme = "darkplus"
+local colorscheme = "onedark"
 
 vim.g.onedarker_italic_keywords = false
 

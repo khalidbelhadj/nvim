@@ -161,6 +161,12 @@ local mappings = {
         h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
         v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
     },
+    r = {
+        s = {"<Plug>RStart", "Start R console"},
+        c = {"<Plug>RClose", "Close R console"},
+        l = {"<Plug>RSendLine", "Send line to console"},
+        v = {"<Plug>RSendSelection", "Send selection to console"},
+    }
 }
 
 which_key.setup(setup)

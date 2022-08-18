@@ -70,3 +70,6 @@ keymap("t", "<C-h>", "<C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-N><C-w>l", term_opts)
+
+keymap("n", "<Tab>", ":bnext<CR>", opts)
+keymap("n", "<S-Tab>", ":bprevious<CR>", opts)

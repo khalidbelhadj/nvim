@@ -53,11 +53,11 @@ vim.g.indent_blankline_context_patterns = {
 }
 
 -- Show space and enter
-vim.opt.list = true
+--[[ vim.opt.list = true
 vim.opt.listchars:append "space:⋅"
 vim.opt.listchars:append "eol:↴"
 
 indent_blankline.setup({
 	show_current_context = true,
     space_char_blankline = " ",
-})
+}) ]]
