@@ -21,7 +21,7 @@ end
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 -- Autoclose nvim tree
-local modifiedBufs = function(bufs)
+--[[ local modifiedBufs = function(bufs)
     local t = 0
     for _, v in pairs(bufs) do
         if v.name:match("NvimTree_") == nil then
@@ -40,7 +40,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
             vim.cmd "quit"
         end
     end
-})
+}) ]]
 
 nvim_tree.setup {
     filters = {
