@@ -11,7 +11,7 @@ M.capabilities = cmp_nvim_lsp.update_capabilities(M.capabilities)
 
 M.setup = function()
 
-    -- Setting error signs 
+    -- Setting error signs
     local signs = {
         { name = "DiagnosticSignError", text = "" },
         { name = "DiagnosticSignWarn", text = "" },
@@ -26,7 +26,7 @@ M.setup = function()
     -- Configuation
     local config = {
         -- Disable virtual text
-        virtual_text = true,
+        virtual_text = false,
         -- show signs
         signs = {
             active = signs,
@@ -76,7 +76,7 @@ local function lsp_keymaps(bufnr)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-    -- TODO:Find a key mapping for signature help 
+    -- TODO:Find a key mapping for signature help
     -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "gl", '<cmd>lua vim.diagnostic.open_float({ border = "rounded" })<CR>', opts)

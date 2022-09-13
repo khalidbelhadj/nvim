@@ -112,7 +112,7 @@ return packer.startup(function(use)
     use("jalvesaq/Nvim-R")
 
     -- Web Dev
-    use("mattn/emmet-vim")
+    -- use("mattn/emmet-vim")
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
