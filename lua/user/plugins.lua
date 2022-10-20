@@ -77,7 +77,7 @@ return packer.startup(function(use)
     use("joshdick/onedark.vim")
     use("dracula/vim")
     use("LunarVim/darkplus.nvim")
-    use("ghifarit53/tokyonight-vim")
+    use("folke/tokyonight.nvim")
     use("Everblush/everblush.vim")
     use("bluz71/vim-moonfly-colors")
 

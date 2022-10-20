@@ -17,7 +17,7 @@ end
 local dashboard = require("alpha.themes.dashboard")
 -- local dashboard = require("alpha.themes.startify")
 
--- Setting dashboard header
+-- setting dashboard header
 dashboard.section.header.val = {
 [[    _   __                _         ]],
 [[   / | / /__  ____ _   __(_)___ ___ ]],
