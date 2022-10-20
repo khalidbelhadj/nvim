@@ -14,8 +14,8 @@ if not status_ok then
 end
 
 -- Use startify theme
---local dashboard = require("alpha.themes.dashboard")
-local dashboard = require("alpha.themes.startify")
+local dashboard = require("alpha.themes.dashboard")
+-- local dashboard = require("alpha.themes.startify")
 
 -- Setting dashboard header
 dashboard.section.header.val = {
@@ -27,7 +27,7 @@ dashboard.section.header.val = {
                                     }
 
 -- Setting buttons
---[[ dashboard.section.buttons.val = {
+dashboard.section.buttons.val = {
     dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
     dashboard.button("e", "  File Explorer", ":NvimTreeOpen<CR>"),
     dashboard.button("p", "  Find project", ":Telescope projects <CR>"),
@@ -35,7 +35,7 @@ dashboard.section.header.val = {
     dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
     dashboard.button("c", "  Configuration", ":e ~/.config/nvim/lua/user <CR>"),
     dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
-} ]]
+}
 
 -- Don't trigger any autocommands
 dashboard.opts.opts.noautocmd = true

@@ -65,3 +65,9 @@ vim.opt.fillchars = vim.opt.fillchars + 'eob: ' -- Replacing end of buffer ~ wit
 -- Autocommand to set laststatus=3, doesnt seem to work normally
 local group = vim.api.nvim_create_augroup("Setting last status", { clear = true })
 vim.api.nvim_create_autocmd("BufEnter", { command = "set laststatus=3", group = group })
+
+-- Autocommand to format on save
+vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
+
+-- Remove command bar when not in command mode
+-- vim.o.ch = 0

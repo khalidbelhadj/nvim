@@ -40,13 +40,13 @@ if not status_ok then
 end
 
 -- Have packer use a popup window
--- packer.init({
---     display = {
---         open_fn = function()
---             return require("packer.util").float({ border = "rounded" })
---         end,
---     },
--- })
+packer.init({
+    display = {
+        open_fn = function()
+            return require("packer.util").float({ border = "rounded" })
+        end,
+    },
+})
 
 -- Install your plugins here
 return packer.startup(function(use)
@@ -79,6 +79,7 @@ return packer.startup(function(use)
     use("LunarVim/darkplus.nvim")
     use("ghifarit53/tokyonight-vim")
     use("Everblush/everblush.vim")
+    use("bluz71/vim-moonfly-colors")
 
     -- cmp plugins
     use({ "hrsh7th/nvim-cmp", commit = "df6734aa018d6feb4d76ba6bda94b1aeac2b378a" })
@@ -103,7 +104,8 @@ return packer.startup(function(use)
     use("BurntSushi/ripgrep")
 
     -- Treesitter
-    use({ "nvim-treesitter/nvim-treesitter", commit = "518e27589c0463af15463c9d675c65e464efc2fe", })
+    -- use({ "nvim-treesitter/nvim-treesitter"--[[ , commit = "518e27589c0463af15463c9d675c65e464efc2fe",  ]]})
+    use("nvim-treesitter/nvim-treesitter")
 
     -- Java
     use("mfussenegger/nvim-jdtls")
