@@ -64,13 +64,13 @@ vim.cmd [[set iskeyword+=-]]
 -- }
 
 -- Autocommand to set laststatus=3, doesnt seem to work normally
--- local group = vim.api.nvim_create_augroup("Setting last status", { clear = true })
--- vim.api.nvim_create_autocmd("BufEnter", { command = "set laststatus=3", group = group })
+local group = vim.api.nvim_create_augroup("Setting last status", { clear = true })
+vim.api.nvim_create_autocmd("BufEnter", { command = "set laststatus=3", group = group })
 
 -- Autocommand to format on save
-local formatOnSave = false
-if formatOnSave then
-    vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
+local formatOnSave = true
+if (formatOnSave) then
+    vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
 end
 
 -- Remove command bar when not in command mode

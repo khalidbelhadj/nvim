@@ -14,9 +14,9 @@ require('lualine').setup {
         theme = 'auto',
         component_separators = '',
         section_separators = '',
-        disabled_filetypes = {--[[ 'NvimTree', ]] 'alpha'},
+        disabled_filetypes = {'alpha'},
         always_divide_middle = true,
-        globalstatus = false,
+        globalstatus = true,
         refresh = {
             statusline = 1000,
             tabline = 1000,

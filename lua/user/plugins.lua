@@ -52,21 +52,21 @@ packer.init({
 return packer.startup(function(use)
 
     -- Essential
-    use( "wbthomason/packer.nvim")
+    use("wbthomason/packer.nvim")
     use("nvim-lua/plenary.nvim")
 
     -- UI
-    use({ "lukas-reineke/indent-blankline.nvim", commit = "6177a59552e35dfb69e1493fd68194e673dc3ee2" })
+    use("lukas-reineke/indent-blankline.nvim")
     use("akinsho/bufferline.nvim")
-    use({ "kyazdani42/nvim-web-devicons", commit = "8d2c5337f0a2d0a17de8e751876eeb192b32310e" })
+    use("kyazdani42/nvim-web-devicons")
     use("goolord/alpha-nvim")
     use("nvim-lualine/lualine.nvim")
     use("junegunn/goyo.vim")
 
     -- Features
-    use({ "windwp/nvim-autopairs", commit = "fa6876f832ea1b71801c4e481d8feca9a36215ec" })
+    use("windwp/nvim-autopairs")
     use("kyazdani42/nvim-tree.lua")
-    use({ "akinsho/toggleterm.nvim", commit = "aaeed9e02167c5e8f00f25156895a6fd95403af8" })
+    use("akinsho/toggleterm.nvim")
     use("folke/which-key.nvim")
     use("tpope/vim-surround")
     use("numToStr/Comment.nvim")
@@ -74,12 +74,13 @@ return packer.startup(function(use)
 
     -- Colorschemes
     use("tomasiser/vim-code-dark")
-    use("joshdick/onedark.vim")
     use("dracula/vim")
     use("LunarVim/darkplus.nvim")
     use("folke/tokyonight.nvim")
     use("Everblush/everblush.vim")
     use("bluz71/vim-moonfly-colors")
+    use("projekt0n/github-nvim-theme")
+    use("navarasu/onedark.nvim")
 
     -- cmp plugins
     use({ "hrsh7th/nvim-cmp", commit = "df6734aa018d6feb4d76ba6bda94b1aeac2b378a" })
@@ -104,7 +105,6 @@ return packer.startup(function(use)
     use("BurntSushi/ripgrep")
 
     -- Treesitter
-    -- use({ "nvim-treesitter/nvim-treesitter"--[[ , commit = "518e27589c0463af15463c9d675c65e464efc2fe",  ]]})
     use("nvim-treesitter/nvim-treesitter")
 
     -- Java
