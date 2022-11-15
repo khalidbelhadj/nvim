@@ -54,24 +54,20 @@ for k, v in pairs(options) do
 end
 
 vim.opt.shortmess:append "c"
+vim.cmd "set whichwrap+=<,>,[,],h,l" -- Cursor goes to the beggining of next line when reached the end
+vim.opt.fillchars = vim.opt.fillchars + 'eob: ' -- Replacing end of buffer ~ with empty space
 
-vim.cmd "set whichwrap+=<,>,[,],h,l" -- Cursor goes to the beggining og next line when reached the end
-vim.cmd [[set iskeyword+=-]]
--- vim.opt.fillchars = vim.opt.fillchars + 'eob: ' -- Replacing end of buffer ~ with empty space
-
--- vim.opt.fillchars:append { -- Adding an extra space under status line
---  stl = ' ',
--- }
-
--- Autocommand to set laststatus=3, doesnt seem to work normally
--- local group = vim.api.nvim_create_augroup("Setting last status", { clear = true })
--- vim.api.nvim_create_autocmd("BufEnter", { command = "set laststatus=3", group = group })
 
 -- Autocommand to format on save
 local formatOnSave = false
 if formatOnSave then
     vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
 end
+
+-- Archived options
+-- Autocommand to set laststatus=3, doesnt seem to work normally
+-- local group = vim.api.nvim_create_augroup("Setting last status", { clear = true })
+-- vim.api.nvim_create_autocmd("BufEnter", { command = "set laststatus=3", group = group })
 
 -- Remove command bar when not in command mode
 -- vim.o.ch = 0
