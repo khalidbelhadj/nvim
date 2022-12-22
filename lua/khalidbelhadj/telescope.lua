@@ -15,7 +15,7 @@ end
 
 local actions = require "telescope.actions"
 
-telescope.setup{
+telescope.setup({
   defaults = {
     -- Default configuration for telescope goes here:
     -- config_key = value,
@@ -37,4 +37,4 @@ telescope.setup{
     -- }
     -- please take a look at the readme of the extension you want to configure
   }
-}
+})

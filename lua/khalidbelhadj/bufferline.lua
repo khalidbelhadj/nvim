@@ -28,7 +28,6 @@ bufferline.setup {
                 filetype = "toggleterm", text = "Terminal"
             }
         },
-        separator_style = 'slant'
     },
 
 }

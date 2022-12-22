@@ -1,29 +1,35 @@
 --
 --  ██╗███╗   ██╗██╗████████╗
 --  ██║████╗  ██║██║╚══██╔══╝
---  ██║██╔██╗ ██║██║   ██║   
---  ██║██║╚██╗██║██║   ██║   
---  ██║██║ ╚████║██║   ██║   
---  ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝   
---init
+--  ██║██╔██╗ ██║██║   ██║
+--  ██║██║╚██╗██║██║   ██║
+--  ██║██║ ╚████║██║   ██║
+--  ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝
+--
 --  Where all configurations are set
 
-require "user.options"
-require "user.keymaps"
-require "user.plugins"
-require "user.colorscheme"
-require "user.cmp"
-require "user.lsp"
-require "user.telescope"
-require "user.treesitter"
-require "user.nvim-tree"
-require "user.autopairs"
-require "user.bufferline"
-require "user.toggleterm"
-require "user.indentline"
-require "user.alpha"
-require "user.whichkey"
-require "user.lualine"
-require "user.todocomments"
-require "user.comment"
-require "user.onedark"
+local files = {
+    "options",
+    "keymaps",
+    "plugins",
+    "colorscheme",
+    "cmp",
+    "lsp",
+    "telescope",
+    "treesitter",
+    "autopairs",
+    "bufferline",
+    "toggleterm",
+    "indentline",
+    "whichkey",
+    "lualine",
+    "todocomments",
+    "comment",
+    "onedark",
+    "mason",
+    "lsp.configs"
+}
+
+for _, file in ipairs(files) do
+    require("khalidbelhadj." .. file)
+end

@@ -40,7 +40,7 @@ local options = {
     relativenumber = false, -- Set relative numbered lines
     numberwidth = 4, -- Set number column width to 2 {default 4}
     signcolumn = "yes", -- Always show the sign column, otherwise it would shift the text each time
-    wrap = false, -- Display lines as one long line
+    wrap = true, -- Display lines as one long line
     scrolloff = 8, -- Start scrolling 8 lines before end
     sidescrolloff = 8, -- Start scrolling 8 columns before end
     guifont = "monospace:h17", -- The font used in graphical neovim applications
@@ -53,25 +53,26 @@ for k, v in pairs(options) do
     vim.opt[k] = v
 end
 
+
 vim.opt.shortmess:append "c"
+vim.cmd "set whichwrap+=<,>,[,],h,l" -- Cursor goes to the beggining of next line when reached the end
+vim.opt.fillchars = vim.opt.fillchars + 'eob: ' -- Replacing end of buffer ~ with empty space
 
-vim.cmd "set whichwrap+=<,>,[,],h,l" -- Cursor goes to the beggining og next line when reached the end
-vim.cmd [[set iskeyword+=-]]
--- vim.opt.fillchars = vim.opt.fillchars + 'eob: ' -- Replacing end of buffer ~ with empty space
-
--- vim.opt.fillchars:append { -- Adding an extra space under status line
---  stl = ' ',
--- }
-
--- Autocommand to set laststatus=3, doesnt seem to work normally
-local group = vim.api.nvim_create_augroup("Setting last status", { clear = true })
-vim.api.nvim_create_autocmd("BufEnter", { command = "set laststatus=3", group = group })
 
 -- Autocommand to format on save
-local formatOnSave = true
-if (formatOnSave) then
-    vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
+local formatOnSave = false
+if formatOnSave then
+    vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
 end
 
--- Remove command bar when not in command mode
--- vim.o.ch = 0
+
+-- Highlight on yank 
+-- See `:help vim.highlight.on_yank()`
+local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = '*',
+})
